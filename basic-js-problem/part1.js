@@ -45,6 +45,7 @@ console.log(Math.round(10.4));
 console.log(Math.ceil(10.1));
 console.log(Math.floor(10.9));
 console.log(Math.pow(2, 4));
+
 console.log(Math.trunc(Math.random() * 9000 + 1000)); // use case for otp.
 
 let a = 4;
