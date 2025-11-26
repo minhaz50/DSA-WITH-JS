@@ -13,6 +13,7 @@ if (isNaN(ans)) {
   console.log("You can not vote");
 }
 */
+// ---------------------------------------------------------------------------------
 
 // Q2: Shop Discount.
 // 1. 0 - 5000 = 0%,
@@ -20,6 +21,7 @@ if (isNaN(ans)) {
 // 3. 7001 - 9000 = 10%
 // 4. above 9000 = 15%
 
+/*
 let amount = Number(prompt("Enter the amount: "));
 discount = 0;
 
@@ -41,3 +43,36 @@ let finalBill = amount - Math.floor((discount * amount) / 100);
 console.log(
   `Final bill to pay after ${discount}% discount applied: ${finalBill} `
 );
+*/
+
+// ---------------------------------------------------------------------------------
+
+// Q3: Electricity Bill
+// unit               price
+// upto 100           bdt 4/unit
+// upto 101 - 200     bdt 6/unit
+// upto 201 - 400     bdt 8/unit
+// more than 400      bdt 13/unit
+
+let unit = Number(prompt("Enter Your Electricity bill: "));
+let amount = 0;
+
+if (unit > 400) {
+  // 500
+  amount = (unit - 400) * 13; // 1300
+  unit = 400;
+}
+
+if (unit > 200 && unit <= 400) {
+  amount += (unit - 200) * 8; // 1600
+  unit = 200;
+}
+
+if (unit > 100 && unit <= 200) {
+  amount += (unit - 100) * 6; // 600
+  unit = 100;
+}
+
+amount += unit * 4; // 400
+
+console.log(amount);
