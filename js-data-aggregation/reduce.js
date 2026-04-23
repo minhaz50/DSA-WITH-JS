@@ -8,8 +8,8 @@ const sum = numbers.reduce((acc, curr) => {
 // short version
 const total = numbers1.reduce((acc, curr) => acc + curr, 0);
 
-console.log("Total is:", sum);
-console.log("Total is:", total);
+// console.log("Total is:", sum);
+// console.log("Total is:", total);
 
 // Find Maximum Number
 
@@ -19,7 +19,7 @@ const maxNums = nums.reduce((acc, curr) => {
   return curr > acc ? curr : acc;
 }, nums[0]);
 
-console.log("The maximum number is: ", maxNums);
+// console.log("The maximum number is: ", maxNums);
 
 // Count items
 
@@ -29,7 +29,7 @@ const count = fruits.reduce((acc, fruit) => {
   acc[fruit] = (acc[fruit] || 0) + 1;
   return acc;
 }, {});
-console.log(count);
+// console.log(count);
 
 // Flatten Array
 
@@ -37,4 +37,22 @@ const arr = [[1, 2], [3, 4], [5]];
 
 const flat = arr.reduce((acc, curr) => acc.concat(curr), []);
 
-console.log(flat);
+// console.log(flat);
+
+// Finding best player
+const players = [
+  { name: "Jamal Bhuyan", score: 88 },
+  { name: "Sheikh Morsalin", score: 81 },
+  { name: "Rakib Hossain", score: 95 },
+  { name: "Topu Barman", score: 91 },
+  { name: "Shoel Rana", score: 72 },
+];
+
+const bestScorer = players.reduce((bestPlayer, player) => {
+  if (bestPlayer.score > player.score) {
+    return bestPlayer;
+  }
+  return player;
+}, players[0]);
+
+console.log(bestScorer);
