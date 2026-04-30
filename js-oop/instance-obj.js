@@ -1,6 +1,6 @@
 // Here are all ways to create instances of Object in JavaScript.
-// Object Literal (most common)
 
+//! Method 1:  Object Literal (most common)
 /*
 let person = {
   first_name: "Minhaz", // Here first_name = key and last_name = value
@@ -26,7 +26,7 @@ let person = {
 
 */
 
-// Creating instance of Object Constructor (new Object())
+//! Method 2 :  Creating instance of Object Constructor (new Object())
 
 let person = new Object();
 
@@ -42,6 +42,7 @@ person.getName = () => {
 
 // console.log(person.getName());
 
+//! Method 3 : Object Constructor ------------- (old way)
 // Constructor Function
 function User(name, age, city) {
   this.name = name;
